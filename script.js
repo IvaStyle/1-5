@@ -1,8 +1,9 @@
 let link = document.querySelector('link');
 function reloadWindow(){
-    window.addEventListener('resize', function () { 
+    window.addEventListener('resize', function (e) { 
         "use strict";
         window.location.reload(); 
+        e.preventDefault();
     })
 }
 function updateWindow() {
@@ -14,6 +15,7 @@ function updateWindow() {
         link.href = '#';
     }
 }
+updateWindow();
 
 const swiperCustom = document.querySelector('.swiper');
 var swiper = new Swiper(swiperCustom, {
@@ -42,6 +44,7 @@ var swiper = new Swiper(swiperCustom, {
       }
   });
 
+  
    function test() {
         if (innerWidth >= 768) {
             swiper.disable()
@@ -49,6 +52,7 @@ var swiper = new Swiper(swiperCustom, {
     }
 
     test();
+
     
 
   document.querySelector('.reveal').addEventListener('click', function() {
@@ -58,5 +62,6 @@ var swiper = new Swiper(swiperCustom, {
     container.classList.toggle('active_click');
     button.textContent !== 'Показать все' ? button.textContent = 'Показать все' : button.textContent = 'Скрыть'   ;
     console.log(button)
+
   });
   
