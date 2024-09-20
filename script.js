@@ -1,9 +1,8 @@
 let link = document.querySelector('link');
 function reloadWindow(){
-    window.addEventListener('resize', function (e) { 
+    window.addEventListener('resize', function () { 
         "use strict";
         window.location.reload(); 
-        e.preventDefault();
     })
 }
 function updateWindow() {
